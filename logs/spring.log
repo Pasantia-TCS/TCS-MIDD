@@ -1,0 +1,423 @@
+2022-06-16 11:28:04.797  INFO 11316 --- [main] c.midd.core.MiddlewareApplicationTests   : Starting MiddlewareApplicationTests using Java 18.0.1.1 on DESKTOP-9TFUPPJ with PID 11316 (started by user in C:\TCS_Proyecto\middleware\middleware_tcs_proyecto\Middleware)
+2022-06-16 11:28:04.810  INFO 11316 --- [main] c.midd.core.MiddlewareApplicationTests   : No active profile set, falling back to 1 default profile: "default"
+2022-06-16 11:28:06.301  INFO 11316 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-06-16 11:28:06.487  INFO 11316 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 158 ms. Found 12 JPA repository interfaces.
+2022-06-16 11:28:07.479  INFO 11316 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$eca15c6b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-16 11:28:07.578  INFO 11316 --- [main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2022-06-16 11:28:08.491  INFO 11316 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-06-16 11:28:08.583  INFO 11316 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.7.Final
+2022-06-16 11:28:08.877  INFO 11316 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-06-16 11:28:09.186  INFO 11316 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-06-16 11:28:10.523  INFO 11316 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-06-16 11:28:10.571  INFO 11316 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.SQLServer2012Dialect
+2022-06-16 11:28:13.390  INFO 11316 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-06-16 11:28:13.419  INFO 11316 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-06-16 11:28:15.397  WARN 11316 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-06-16 11:28:15.716  WARN 11316 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 8a2e60e5-6637-4a7c-8ca8-5c8deda55512
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2022-06-16 11:28:16.224  INFO 11316 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will not secure any request
+2022-06-16 11:28:18.063  WARN 11316 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2022-06-16 11:28:18.677  INFO 11316 --- [main] c.midd.core.MiddlewareApplicationTests   : Started MiddlewareApplicationTests in 14.533 seconds (JVM running for 16.315)
+2022-06-16 11:28:19.151  INFO 11316 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-06-16 11:28:19.155  INFO 11316 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-06-16 11:28:19.177  INFO 11316 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-06-16 11:31:58.430  INFO 14268 --- [main] c.midd.core.MiddlewareApplicationTests   : Starting MiddlewareApplicationTests using Java 18.0.1.1 on DESKTOP-9TFUPPJ with PID 14268 (started by user in C:\TCS_Proyecto\middleware\middleware_tcs_proyecto\Middleware)
+2022-06-16 11:31:58.433  INFO 14268 --- [main] c.midd.core.MiddlewareApplicationTests   : No active profile set, falling back to 1 default profile: "default"
+2022-06-16 11:31:59.795  INFO 14268 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-06-16 11:31:59.985  INFO 14268 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 174 ms. Found 12 JPA repository interfaces.
+2022-06-16 11:32:00.726  INFO 14268 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$273e0deb] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-16 11:32:00.829  INFO 14268 --- [main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2022-06-16 11:32:01.945  INFO 14268 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-06-16 11:32:02.111  INFO 14268 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.7.Final
+2022-06-16 11:32:02.445  INFO 14268 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-06-16 11:32:02.820  INFO 14268 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-06-16 11:32:04.245  INFO 14268 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-06-16 11:32:04.293  INFO 14268 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.SQLServer2012Dialect
+2022-06-16 11:32:06.415  INFO 14268 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-06-16 11:32:06.432  INFO 14268 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-06-16 11:32:07.392  WARN 14268 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-06-16 11:32:07.619  WARN 14268 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: c40ec4c0-50e1-4a6c-b0f2-ec117e6be5dd
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2022-06-16 11:32:07.891  INFO 14268 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will not secure any request
+2022-06-16 11:32:09.111  WARN 14268 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2022-06-16 11:32:09.506  INFO 14268 --- [main] c.midd.core.MiddlewareApplicationTests   : Started MiddlewareApplicationTests in 11.591 seconds (JVM running for 13.32)
+2022-06-16 11:32:09.903  INFO 14268 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-06-16 11:32:09.906  INFO 14268 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-06-16 11:32:09.913  INFO 14268 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-06-16 11:36:21.100  INFO 7412 --- [main] com.midd.core.MiddlewareApplication      : Starting MiddlewareApplication using Java 18.0.1.1 on DESKTOP-9TFUPPJ with PID 7412 (C:\TCS_Proyecto\middleware\middleware_tcs_proyecto\Middleware\target\classes started by user in C:\TCS_Proyecto\middleware\middleware_tcs_proyecto\Middleware)
+2022-06-16 11:36:21.104  INFO 7412 --- [main] com.midd.core.MiddlewareApplication      : No active profile set, falling back to 1 default profile: "default"
+2022-06-16 11:36:22.585  INFO 7412 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-06-16 11:36:22.768  INFO 7412 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 167 ms. Found 12 JPA repository interfaces.
+2022-06-16 11:36:23.376  INFO 7412 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$3483bcd8] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-16 11:36:23.450  INFO 7412 --- [main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2022-06-16 11:36:24.046  INFO 7412 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2022-06-16 11:36:24.063  INFO 7412 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-16 11:36:24.063  INFO 7412 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2022-06-16 11:36:24.267  INFO 7412 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-06-16 11:36:24.268  INFO 7412 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3001 ms
+2022-06-16 11:36:24.737  INFO 7412 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-06-16 11:36:24.803  INFO 7412 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.7.Final
+2022-06-16 11:36:25.133  INFO 7412 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-06-16 11:36:25.371  INFO 7412 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-06-16 11:36:26.673  INFO 7412 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-06-16 11:36:26.708  INFO 7412 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.SQLServer2012Dialect
+2022-06-16 11:36:28.542  INFO 7412 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-06-16 11:36:28.561  INFO 7412 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-06-16 11:36:29.428  WARN 7412 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-06-16 11:36:29.540  WARN 7412 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 4cfb73f3-2423-436c-a3b3-eed6f1bad09d
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2022-06-16 11:36:29.683  INFO 7412 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will not secure any request
+2022-06-16 11:36:30.365  WARN 7412 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2022-06-16 11:36:30.667  INFO 7412 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2022-06-16 11:36:30.684  INFO 7412 --- [main] com.midd.core.MiddlewareApplication      : Started MiddlewareApplication in 10.211 seconds (JVM running for 10.935)
+2022-06-16 11:37:01.538  INFO 7412 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-06-16 11:37:01.539  INFO 7412 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-06-16 11:37:01.540  INFO 7412 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-06-16 11:37:29.641  INFO 1356 --- [main] c.midd.core.MiddlewareApplicationTests   : Starting MiddlewareApplicationTests using Java 18.0.1.1 on DESKTOP-9TFUPPJ with PID 1356 (started by user in C:\TCS_Proyecto\middleware\middleware_tcs_proyecto\Middleware)
+2022-06-16 11:37:29.643  INFO 1356 --- [main] c.midd.core.MiddlewareApplicationTests   : No active profile set, falling back to 1 default profile: "default"
+2022-06-16 11:37:30.845  INFO 1356 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-06-16 11:37:31.025  INFO 1356 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 165 ms. Found 12 JPA repository interfaces.
+2022-06-16 11:37:31.615  INFO 1356 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$e2680d2f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-16 11:37:31.710  INFO 1356 --- [main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2022-06-16 11:37:32.431  INFO 1356 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-06-16 11:37:32.532  INFO 1356 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.7.Final
+2022-06-16 11:37:32.806  INFO 1356 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-06-16 11:37:33.117  INFO 1356 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-06-16 11:37:34.548  INFO 1356 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-06-16 11:37:34.598  INFO 1356 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.SQLServer2012Dialect
+2022-06-16 11:37:36.608  INFO 1356 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-06-16 11:37:36.634  INFO 1356 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-06-16 11:37:37.689  WARN 1356 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-06-16 11:37:37.869  WARN 1356 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: bc1279db-802e-43f3-addf-9953358d8a8b
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2022-06-16 11:37:38.154  INFO 1356 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will not secure any request
+2022-06-16 11:37:39.271  WARN 1356 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2022-06-16 11:37:39.708  INFO 1356 --- [main] c.midd.core.MiddlewareApplicationTests   : Started MiddlewareApplicationTests in 10.578 seconds (JVM running for 12.115)
+2022-06-16 11:37:40.092  INFO 1356 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-06-16 11:37:40.096  INFO 1356 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-06-16 11:37:40.107  INFO 1356 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-06-16 11:47:42.189  INFO 14348 --- [main] c.midd.core.MiddlewareApplicationTests   : Starting MiddlewareApplicationTests using Java 18.0.1.1 on DESKTOP-9TFUPPJ with PID 14348 (started by user in C:\TCS_Proyecto\middleware\middleware_tcs_proyecto\Middleware)
+2022-06-16 11:47:42.191  INFO 14348 --- [main] c.midd.core.MiddlewareApplicationTests   : No active profile set, falling back to 1 default profile: "default"
+2022-06-16 11:47:43.594  INFO 14348 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-06-16 11:47:43.810  INFO 14348 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 196 ms. Found 12 JPA repository interfaces.
+2022-06-16 11:47:44.490  INFO 14348 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$7f4d1243] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-16 11:47:44.580  INFO 14348 --- [main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2022-06-16 11:47:45.375  INFO 14348 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-06-16 11:47:45.501  INFO 14348 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.7.Final
+2022-06-16 11:47:45.823  INFO 14348 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-06-16 11:47:46.141  INFO 14348 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-06-16 11:47:47.452  INFO 14348 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-06-16 11:47:47.524  INFO 14348 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.SQLServer2012Dialect
+2022-06-16 11:47:49.565  INFO 14348 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-06-16 11:47:49.579  INFO 14348 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-06-16 11:47:50.707  WARN 14348 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-06-16 11:47:50.899  WARN 14348 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 363aa5b3-508c-4169-9524-88fb72b6270e
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2022-06-16 11:47:51.166  INFO 14348 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will not secure any request
+2022-06-16 11:47:52.472  WARN 14348 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2022-06-16 11:47:52.979  INFO 14348 --- [main] c.midd.core.MiddlewareApplicationTests   : Started MiddlewareApplicationTests in 11.289 seconds (JVM running for 13.253)
+2022-06-16 11:47:53.482  INFO 14348 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-06-16 11:47:53.485  INFO 14348 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-06-16 11:47:53.501  INFO 14348 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-06-16 11:50:39.199  INFO 6076 --- [main] c.midd.core.MiddlewareApplicationTests   : Starting MiddlewareApplicationTests using Java 18.0.1.1 on DESKTOP-9TFUPPJ with PID 6076 (started by user in C:\TCS_Proyecto\middleware\middleware_tcs_proyecto\Middleware)
+2022-06-16 11:50:39.202  INFO 6076 --- [main] c.midd.core.MiddlewareApplicationTests   : No active profile set, falling back to 1 default profile: "default"
+2022-06-16 11:50:40.442  INFO 6076 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-06-16 11:50:40.627  INFO 6076 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 165 ms. Found 12 JPA repository interfaces.
+2022-06-16 11:50:41.336  INFO 6076 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$f6648b88] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-16 11:50:41.445  INFO 6076 --- [main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2022-06-16 11:50:42.374  INFO 6076 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-06-16 11:50:42.474  INFO 6076 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.7.Final
+2022-06-16 11:50:42.749  INFO 6076 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-06-16 11:50:43.068  INFO 6076 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-06-16 11:50:44.329  INFO 6076 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-06-16 11:50:44.372  INFO 6076 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.SQLServer2012Dialect
+2022-06-16 11:50:46.430  INFO 6076 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-06-16 11:50:46.455  INFO 6076 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-06-16 11:50:47.741  WARN 6076 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-06-16 11:50:47.966  WARN 6076 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 43ac0c95-7b17-4ec3-ad1b-a1e608f5e520
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2022-06-16 11:50:48.290  INFO 6076 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will not secure any request
+2022-06-16 11:50:49.462  WARN 6076 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2022-06-16 11:50:49.949  INFO 6076 --- [main] c.midd.core.MiddlewareApplicationTests   : Started MiddlewareApplicationTests in 11.211 seconds (JVM running for 12.688)
+2022-06-16 11:50:50.362  INFO 6076 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-06-16 11:50:50.366  INFO 6076 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-06-16 11:50:50.377  INFO 6076 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-06-16 12:00:11.362  INFO 3856 --- [main] c.midd.core.MiddlewareApplicationTests   : Starting MiddlewareApplicationTests using Java 18.0.1.1 on DESKTOP-9TFUPPJ with PID 3856 (started by user in C:\TCS_Proyecto\middleware\middleware_tcs_proyecto\Middleware)
+2022-06-16 12:00:11.364  INFO 3856 --- [main] c.midd.core.MiddlewareApplicationTests   : No active profile set, falling back to 1 default profile: "default"
+2022-06-16 12:00:12.627  INFO 3856 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-06-16 12:00:12.813  INFO 3856 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 167 ms. Found 12 JPA repository interfaces.
+2022-06-16 12:00:13.497  INFO 3856 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$acaa82da] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-16 12:00:13.630  INFO 3856 --- [main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2022-06-16 12:00:14.400  INFO 3856 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-06-16 12:00:14.504  INFO 3856 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.7.Final
+2022-06-16 12:00:14.798  INFO 3856 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-06-16 12:00:15.091  INFO 3856 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-06-16 12:00:16.420  INFO 3856 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-06-16 12:00:16.469  INFO 3856 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.SQLServer2012Dialect
+2022-06-16 12:00:18.564  INFO 3856 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-06-16 12:00:18.589  INFO 3856 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-06-16 12:00:19.583  WARN 3856 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-06-16 12:00:19.809  WARN 3856 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 4a21b230-6fc0-4412-9107-eaddc387e2a2
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2022-06-16 12:00:20.109  INFO 3856 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will not secure any request
+2022-06-16 12:00:21.425  WARN 3856 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2022-06-16 12:00:21.863  INFO 3856 --- [main] c.midd.core.MiddlewareApplicationTests   : Started MiddlewareApplicationTests in 11.01 seconds (JVM running for 12.633)
+2022-06-16 12:00:22.286  INFO 3856 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-06-16 12:00:22.288  INFO 3856 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-06-16 12:00:22.301  INFO 3856 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-06-16 17:47:10.924  INFO 1352 --- [main] c.midd.core.MiddlewareApplicationTests   : Starting MiddlewareApplicationTests using Java 18.0.1.1 on DESKTOP-9TFUPPJ with PID 1352 (started by user in C:\TCS_Proyecto\middleware\middleware_tcs_proyecto\Middleware)
+2022-06-16 17:47:10.926  INFO 1352 --- [main] c.midd.core.MiddlewareApplicationTests   : No active profile set, falling back to 1 default profile: "default"
+2022-06-16 17:47:12.146  INFO 1352 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-06-16 17:47:12.317  INFO 1352 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 153 ms. Found 12 JPA repository interfaces.
+2022-06-16 17:47:12.899  INFO 1352 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$411a44df] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-16 17:47:13.021  INFO 1352 --- [main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2022-06-16 17:47:13.742  INFO 1352 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-06-16 17:47:13.856  INFO 1352 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.7.Final
+2022-06-16 17:47:14.124  INFO 1352 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-06-16 17:47:14.466  INFO 1352 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-06-16 17:47:15.774  INFO 1352 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-06-16 17:47:15.809  INFO 1352 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.SQLServer2012Dialect
+2022-06-16 17:47:18.272  INFO 1352 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-06-16 17:47:18.289  INFO 1352 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-06-16 17:47:19.770  WARN 1352 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-06-16 17:47:19.969  WARN 1352 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 85773a2a-6163-48aa-9c3c-afefe30b8ef9
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2022-06-16 17:47:20.247  INFO 1352 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will not secure any request
+2022-06-16 17:47:21.452  WARN 1352 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2022-06-16 17:47:21.860  INFO 1352 --- [main] c.midd.core.MiddlewareApplicationTests   : Started MiddlewareApplicationTests in 11.404 seconds (JVM running for 12.867)
+2022-06-16 17:47:22.232  INFO 1352 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-06-16 17:47:22.235  INFO 1352 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-06-16 17:47:22.242  INFO 1352 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-06-16 18:13:42.795  INFO 13640 --- [main] c.midd.core.MiddlewareApplicationTests   : Starting MiddlewareApplicationTests using Java 18.0.1.1 on DESKTOP-9TFUPPJ with PID 13640 (started by user in C:\TCS_Proyecto\middleware\middleware_tcs_proyecto\Middleware)
+2022-06-16 18:13:42.797  INFO 13640 --- [main] c.midd.core.MiddlewareApplicationTests   : No active profile set, falling back to 1 default profile: "default"
+2022-06-16 18:13:43.798  INFO 13640 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-06-16 18:13:43.974  INFO 13640 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 161 ms. Found 12 JPA repository interfaces.
+2022-06-16 18:13:44.475  INFO 13640 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$55f14f88] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-16 18:13:44.557  INFO 13640 --- [main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2022-06-16 18:13:45.181  INFO 13640 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-06-16 18:13:45.279  INFO 13640 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.7.Final
+2022-06-16 18:13:45.513  INFO 13640 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-06-16 18:13:45.743  INFO 13640 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-06-16 18:13:46.842  INFO 13640 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-06-16 18:13:46.872  INFO 13640 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.SQLServer2012Dialect
+2022-06-16 18:13:48.507  INFO 13640 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-06-16 18:13:48.518  INFO 13640 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-06-16 18:13:49.334  WARN 13640 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-06-16 18:13:49.462  WARN 13640 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: be38b784-6f49-41a5-8f74-8d0e753bda4e
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2022-06-16 18:13:49.680  INFO 13640 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will not secure any request
+2022-06-16 18:13:50.693  WARN 13640 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2022-06-16 18:13:51.169  INFO 13640 --- [main] c.midd.core.MiddlewareApplicationTests   : Started MiddlewareApplicationTests in 8.799 seconds (JVM running for 10.089)
+2022-06-16 18:13:51.603  INFO 13640 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-06-16 18:13:51.605  INFO 13640 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-06-16 18:13:51.617  INFO 13640 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-06-16 18:18:28.696  INFO 4236 --- [main] c.midd.core.MiddlewareApplicationTests   : Starting MiddlewareApplicationTests using Java 18.0.1.1 on DESKTOP-9TFUPPJ with PID 4236 (started by user in C:\TCS_Proyecto\middleware\middleware_tcs_proyecto\Middleware)
+2022-06-16 18:18:28.699  INFO 4236 --- [main] c.midd.core.MiddlewareApplicationTests   : No active profile set, falling back to 1 default profile: "default"
+2022-06-16 18:18:29.682  INFO 4236 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-06-16 18:18:29.873  INFO 4236 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 175 ms. Found 12 JPA repository interfaces.
+2022-06-16 18:18:30.387  INFO 4236 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$b0cf57a3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-16 18:18:30.467  INFO 4236 --- [main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2022-06-16 18:18:31.096  INFO 4236 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-06-16 18:18:31.251  INFO 4236 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.7.Final
+2022-06-16 18:18:31.579  INFO 4236 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-06-16 18:18:31.922  INFO 4236 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-06-16 18:18:33.042  INFO 4236 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-06-16 18:18:33.072  INFO 4236 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.SQLServer2012Dialect
+2022-06-16 18:18:34.929  INFO 4236 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-06-16 18:18:34.942  INFO 4236 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-06-16 18:18:35.885  WARN 4236 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-06-16 18:18:36.055  WARN 4236 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: f3af4213-b372-4ac0-917b-dddfcb86e4c5
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2022-06-16 18:18:36.371  INFO 4236 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will not secure any request
+2022-06-16 18:18:37.624  WARN 4236 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2022-06-16 18:18:38.021  INFO 4236 --- [main] c.midd.core.MiddlewareApplicationTests   : Started MiddlewareApplicationTests in 9.735 seconds (JVM running for 11.066)
+2022-06-16 18:18:38.392  INFO 4236 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-06-16 18:18:38.396  INFO 4236 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-06-16 18:18:38.404  INFO 4236 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-06-16 18:21:10.310  INFO 8212 --- [main] c.midd.core.MiddlewareApplicationTests   : Starting MiddlewareApplicationTests using Java 18.0.1.1 on DESKTOP-9TFUPPJ with PID 8212 (started by user in C:\TCS_Proyecto\middleware\middleware_tcs_proyecto\Middleware)
+2022-06-16 18:21:10.312  INFO 8212 --- [main] c.midd.core.MiddlewareApplicationTests   : No active profile set, falling back to 1 default profile: "default"
+2022-06-16 18:21:11.319  INFO 8212 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-06-16 18:21:11.507  INFO 8212 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 172 ms. Found 12 JPA repository interfaces.
+2022-06-16 18:21:12.087  INFO 8212 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$290d9f41] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-16 18:21:12.161  INFO 8212 --- [main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2022-06-16 18:21:12.784  INFO 8212 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-06-16 18:21:12.872  INFO 8212 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.7.Final
+2022-06-16 18:21:13.111  INFO 8212 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-06-16 18:21:13.347  INFO 8212 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-06-16 18:21:14.471  INFO 8212 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-06-16 18:21:14.499  INFO 8212 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.SQLServer2012Dialect
+2022-06-16 18:21:16.154  INFO 8212 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-06-16 18:21:16.168  INFO 8212 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-06-16 18:21:17.104  WARN 8212 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-06-16 18:21:17.262  WARN 8212 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: f7b86e22-c3ec-4f18-ba3b-8a987183e15c
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2022-06-16 18:21:17.486  INFO 8212 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will not secure any request
+2022-06-16 18:21:18.406  WARN 8212 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2022-06-16 18:21:18.790  INFO 8212 --- [main] c.midd.core.MiddlewareApplicationTests   : Started MiddlewareApplicationTests in 8.913 seconds (JVM running for 10.311)
+2022-06-16 18:21:19.154  INFO 8212 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-06-16 18:21:19.158  INFO 8212 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-06-16 18:21:19.167  INFO 8212 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-06-16 19:13:55.835  INFO 12752 --- [main] c.midd.core.MiddlewareApplicationTests   : Starting MiddlewareApplicationTests using Java 18.0.1.1 on DESKTOP-9TFUPPJ with PID 12752 (started by user in C:\TCS_Proyecto\middleware\middleware_tcs_proyecto\Middleware)
+2022-06-16 19:13:55.843  INFO 12752 --- [main] c.midd.core.MiddlewareApplicationTests   : No active profile set, falling back to 1 default profile: "default"
+2022-06-16 19:13:59.305  INFO 12752 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-06-16 19:13:59.720  INFO 12752 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 353 ms. Found 12 JPA repository interfaces.
+2022-06-16 19:14:01.240  INFO 12752 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$a827151c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-16 19:14:01.471  INFO 12752 --- [main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2022-06-16 19:14:03.693  INFO 12752 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-06-16 19:14:03.889  INFO 12752 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.7.Final
+2022-06-16 19:14:04.489  INFO 12752 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-06-16 19:14:05.105  INFO 12752 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-06-16 19:14:06.970  INFO 12752 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-06-16 19:14:07.097  INFO 12752 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.SQLServer2012Dialect
+2022-06-16 19:14:10.592  INFO 12752 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-06-16 19:14:10.661  INFO 12752 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-06-16 19:14:13.550  WARN 12752 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-06-16 19:14:13.960  WARN 12752 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: d766d8ef-ef57-4c87-a461-67c1fad7c6af
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2022-06-16 19:14:14.445  INFO 12752 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will not secure any request
+2022-06-16 19:14:16.860  WARN 12752 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2022-06-16 19:14:18.378  INFO 12752 --- [main] c.midd.core.MiddlewareApplicationTests   : Started MiddlewareApplicationTests in 23.546 seconds (JVM running for 26.606)
+2022-06-16 19:14:19.025  INFO 12752 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-06-16 19:14:19.036  INFO 12752 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-06-16 19:14:19.056  INFO 12752 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-06-16 19:16:58.524  INFO 6372 --- [main] c.midd.core.MiddlewareApplicationTests   : Starting MiddlewareApplicationTests using Java 18.0.1.1 on DESKTOP-9TFUPPJ with PID 6372 (started by user in C:\TCS_Proyecto\middleware\middleware_tcs_proyecto\Middleware)
+2022-06-16 19:16:58.532  INFO 6372 --- [main] c.midd.core.MiddlewareApplicationTests   : No active profile set, falling back to 1 default profile: "default"
+2022-06-16 19:17:01.285  INFO 6372 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-06-16 19:17:01.645  INFO 6372 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 318 ms. Found 12 JPA repository interfaces.
+2022-06-16 19:17:03.067  INFO 6372 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$f6648b88] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-16 19:17:03.394  INFO 6372 --- [main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2022-06-16 19:17:05.087  INFO 6372 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-06-16 19:17:05.379  INFO 6372 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.7.Final
+2022-06-16 19:17:05.809  INFO 6372 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-06-16 19:17:06.357  INFO 6372 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-06-16 19:17:08.062  INFO 6372 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-06-16 19:17:08.142  INFO 6372 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.SQLServer2012Dialect
+2022-06-16 19:17:11.305  INFO 6372 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-06-16 19:17:11.343  INFO 6372 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-06-16 19:17:14.297  WARN 6372 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-06-16 19:17:14.851  WARN 6372 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: b3f0a5cf-e41e-4475-8ffe-a5993ef80e31
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2022-06-16 19:17:15.528  INFO 6372 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will not secure any request
+2022-06-16 19:17:18.281  WARN 6372 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2022-06-16 19:17:19.315  INFO 6372 --- [main] c.midd.core.MiddlewareApplicationTests   : Started MiddlewareApplicationTests in 22.132 seconds (JVM running for 25.366)
+2022-06-16 19:17:19.970  INFO 6372 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-06-16 19:17:19.979  INFO 6372 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-06-16 19:17:20.009  INFO 6372 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-06-16 19:44:04.848  INFO 1376 --- [main] com.midd.core.MiddlewareApplication      : Starting MiddlewareApplication using Java 18.0.1.1 on DESKTOP-9TFUPPJ with PID 1376 (C:\TCS_Proyecto\middleware\middleware_tcs_proyecto\Middleware\target\classes started by user in C:\TCS_Proyecto\middleware\middleware_tcs_proyecto\Middleware)
+2022-06-16 19:44:04.863  INFO 1376 --- [main] com.midd.core.MiddlewareApplication      : No active profile set, falling back to 1 default profile: "default"
+2022-06-16 19:44:08.829  INFO 1376 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-06-16 19:44:09.448  INFO 1376 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 446 ms. Found 12 JPA repository interfaces.
+2022-06-16 19:44:11.567  INFO 1376 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$33b2b435] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-16 19:44:11.825  INFO 1376 --- [main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2022-06-16 19:44:13.564  INFO 1376 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2022-06-16 19:44:13.608  INFO 1376 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-16 19:44:13.611  INFO 1376 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2022-06-16 19:44:14.018  INFO 1376 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-06-16 19:44:14.021  INFO 1376 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 8789 ms
+2022-06-16 19:44:14.964  INFO 1376 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-06-16 19:44:15.139  INFO 1376 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.7.Final
+2022-06-16 19:44:15.738  INFO 1376 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-06-16 19:44:16.209  INFO 1376 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-06-16 19:44:17.850  INFO 1376 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-06-16 19:44:17.914  INFO 1376 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.SQLServer2012Dialect
+2022-06-16 19:44:21.649  INFO 1376 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-06-16 19:44:21.686  INFO 1376 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-06-16 19:44:23.918  WARN 1376 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-06-16 19:44:24.394  WARN 1376 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: d1c60d72-266b-4495-bfff-a226c9e32dc6
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2022-06-16 19:44:24.847  INFO 1376 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will not secure any request
+2022-06-16 19:44:26.089  WARN 1376 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2022-06-16 19:44:26.571  INFO 1376 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2022-06-16 19:44:26.600  INFO 1376 --- [main] com.midd.core.MiddlewareApplication      : Started MiddlewareApplication in 23.44 seconds (JVM running for 25.316)
+2022-06-16 19:44:53.468  INFO 1376 --- [http-nio-8081-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-06-16 19:44:53.471  INFO 1376 --- [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-06-16 19:44:53.480  INFO 1376 --- [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2022-06-16 20:25:42.970  INFO 12612 --- [main] com.midd.core.MiddlewareApplication      : Starting MiddlewareApplication using Java 18.0.1.1 on DESKTOP-9TFUPPJ with PID 12612 (C:\TCS_Proyecto\middleware\middleware_tcs_proyecto\Middleware\target\classes started by user in C:\TCS_Proyecto\middleware\middleware_tcs_proyecto\Middleware)
+2022-06-16 20:25:42.979  INFO 12612 --- [main] com.midd.core.MiddlewareApplication      : No active profile set, falling back to 1 default profile: "default"
+2022-06-16 20:25:44.583  INFO 12612 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-06-16 20:25:44.812  INFO 12612 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 181 ms. Found 12 JPA repository interfaces.
+2022-06-16 20:25:45.767  INFO 12612 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$1d856376] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-16 20:25:45.877  INFO 12612 --- [main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2022-06-16 20:25:46.735  INFO 12612 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2022-06-16 20:25:46.776  INFO 12612 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-16 20:25:46.780  INFO 12612 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2022-06-16 20:25:47.134  INFO 12612 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-06-16 20:25:47.144  INFO 12612 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4059 ms
+2022-06-16 20:25:47.861  INFO 12612 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-06-16 20:25:47.994  INFO 12612 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.7.Final
+2022-06-16 20:25:48.274  INFO 12612 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-06-16 20:25:48.489  INFO 12612 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-06-16 20:25:49.750  INFO 12612 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-06-16 20:25:49.791  INFO 12612 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.SQLServer2012Dialect
+2022-06-16 20:25:52.049  INFO 12612 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-06-16 20:25:52.073  INFO 12612 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-06-16 20:25:54.324  WARN 12612 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-06-16 20:25:54.556  WARN 12612 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 5a7c59f7-865d-4540-aee6-e534cd75c36a
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2022-06-16 20:25:54.764  INFO 12612 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will not secure any request
+2022-06-16 20:25:55.482  WARN 12612 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2022-06-16 20:25:55.874  INFO 12612 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2022-06-16 20:25:55.896  INFO 12612 --- [main] com.midd.core.MiddlewareApplication      : Started MiddlewareApplication in 13.755 seconds (JVM running for 14.832)
+2022-06-16 20:26:27.040  INFO 12612 --- [http-nio-8081-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-06-16 20:26:27.042  INFO 12612 --- [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-06-16 20:26:27.044  INFO 12612 --- [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
