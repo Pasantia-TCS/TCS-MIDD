@@ -8,6 +8,8 @@ import org.springframework.stereotype.Service;
 @Service
 public class Respuestas {
 
+
+    // FUNCION CREACION DE RESPUESTAS HACIA LAS PETICIONES DEL CLIENTE
     public Map<String, Object> respuestas(String mensaje, String codigo) {
         Map<String, Object> respuesta = new HashMap<>();
         respuesta.put("mensaje", mensaje);

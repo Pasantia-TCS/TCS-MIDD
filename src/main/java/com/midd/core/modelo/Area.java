@@ -9,17 +9,23 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+
+// CREACION DE LA ENTIDAD
 @Entity
 @Table(name="area_ac")
 public class Area implements Serializable{
+	
+	// CREACION DEL ID DE LA TABLA
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
+	// CREACION DE COLUMNA
 	@Column(name="id_area",nullable = false,updatable = false)
 	private Long id;
 	
+	// CREACION DE COLUMNA
 	@Column(name="nombre_area",nullable=false)
 	private String 	nombre;
-	//Constructor
+
 	public Area(Long id, String nombre) {
 		super();
 		this.id = id;
@@ -28,7 +34,8 @@ public class Area implements Serializable{
 	public Area() {
 		super();
 	}
-	//getters and setters
+
+	//GETTERS Y SETTERS
 	public Long getId() {
 		return id;
 	}

@@ -37,7 +37,7 @@ public class RecursosEquipo {
         this.servicioCatalogoTipoProyecto = servicioCatalogoTipoProyecto;
     }
 
-    @PostMapping("/agregar-equipo")
+    @PostMapping("/agregar-equipo")//ENDPOITN QUE PERMITE AGREGAR UN EQUIPO DE TRABAJO 
     public ResponseEntity<?> agregarEquipo(@RequestBody Equipo equipo) {
 
         if (!servicio_equipo.buscarEquipos(equipo)) {
@@ -51,7 +51,7 @@ public class RecursosEquipo {
 
     }
 
-    @PostMapping("/editar-equipo")
+    @PostMapping("/editar-equipo")//ENDPOINT QUE PERMITE EDITAR LOS CAMPOS NOMBRE LIDER Y NOMBRE TECNICO LIDER DE EQUIPO 
     public ResponseEntity<?> editarEquipo(@RequestBody Equipo equipo) {
 
         try {
@@ -69,7 +69,7 @@ public class RecursosEquipo {
 
     }
 
-    @PostMapping("/eliminar-equipo")
+    @PostMapping("/eliminar-equipo")//ENDPOINT QUE PERMITE ELIMINAR UN EQUIPO PREVIAMENTE CREADO CON SU RESPECTIVO ID
     public ResponseEntity<?> eliminarEquipo(@RequestBody Equipo equipo) {
         try {
             Equipo equipos = servicio_equipo.buscarEquipoId(equipo.getId_asi());
@@ -81,13 +81,13 @@ public class RecursosEquipo {
         }
     }
 
-    @GetMapping("/buscar-equipos")
+    @GetMapping("/buscar-equipos")//ENDPOINT QUE PERMITE BUSCAR TODOS LOS EQUIPOS CREADOS 
     public ResponseEntity<List<Equipo>> buscarEquipos() {
         List<Equipo> equipos = servicio_equipo.buscarTodosEquipos();
         return new ResponseEntity<>(equipos, HttpStatus.OK);
     }
 
-    @PostMapping("/buscar-equipo")
+    @PostMapping("/buscar-equipo")//ENDPOINT QUE PERMITE BUSCAR UN EQUIPO ESPECIFICO CON SU RESPECTIVO ID
     public ResponseEntity<?> buscarEquiposId(@RequestBody Equipo equipo) {
         try {
             Equipo equipos = servicio_equipo.buscarEquipoId(equipo.getId_asi());
@@ -97,7 +97,7 @@ public class RecursosEquipo {
         }
     }
 
-    @PostMapping("/buscar-nombre-equipo")
+    @PostMapping("/buscar-nombre-equipo")//ENDPOINT QUE PERMITE BUSCAR UN EQUIPO POR SU NOMBRE
     public ResponseEntity<?> buscarEquipoNombre(@RequestBody Equipo equipo) {
 
         List<Equipo> equipos = servicio_equipo.buscarNombreEquipo(equipo.getNombre_equipo_asi());
@@ -107,7 +107,7 @@ public class RecursosEquipo {
         return new ResponseEntity<>(equipos, HttpStatus.OK);
     }
 
-    @PostMapping("/buscar-tipo-proyecto")
+    @PostMapping("/buscar-tipo-proyecto")//ENDPOINT QUE PERMITE BUSCAR UN EQUIPO POR SU TIPO DE PROYECTO
     public ResponseEntity<?> buscarTipoProyecto(@RequestBody Equipo equipo) {
 
         List<Equipo> equipos = servicio_equipo.listaEquipo(equipo.getTipo_equipo_asi());
@@ -119,10 +119,8 @@ public class RecursosEquipo {
         return new ResponseEntity<>(equipos, HttpStatus.OK);
     }
 
-    @GetMapping("/obtener-tipo-equipos")
+    @GetMapping("/obtener-tipo-equipos")//ENDPOINT QUE PERMITE BUSCAR UN EQUIPO POR SU TIPO DE PROYECTO
     public ResponseEntity<List<TipoProyecto>> obtenerTIpoEquipos() {
         return new ResponseEntity<>(this.servicioCatalogoTipoProyecto.obtenerTiposProyectos(), HttpStatus.OK);
-    }
-
-     
+    }     
 }

@@ -10,68 +10,92 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+
+// CREACION DE LA ENTIDAD
 @Entity
 @Table(name="activos_ac")
 public class Activos implements Serializable {
+
+	// CREACION ID DE LA TABLA
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
+	// CREACION DE COLUMNA
 	@Column(name="id_ac",nullable = false,updatable = false)
 	private Long id_activo;
 	
+	// CREACION DE COLUMNA
 	@Column(name="area_ac",nullable=false)
 	private String 	area;
 	
+	// CREACION DE COLUMNA
 	@Column(name="edificio_ac",nullable=false)
 	private String 	edificio;
 	
+	// CREACION DE COLUMNA
 	@Column(name="piso_ac",nullable=false)
 	private String 	piso;
 	
+	// CREACION DE COLUMNA
 	@Column(name="tipo_ac",nullable=false)
 	private String 	tipo;
 	
+	// CREACION DE COLUMNA
 	@Column(name="hostname_ac",nullable=false)
 	private String 	hostname;
 	
+	// CREACION DE COLUMNA
 	@Column(name="direccion_mac_ac",nullable=true)
 	private String 	direccion_mac;
 	
+	// CREACION DE COLUMNA
 	@Column(name="direccion_ip_ac",nullable=true)
 	private String 	direccion_ip;
 	
+	// CREACION DE COLUMNA
 	@Column(name="ip_reservada_ac",nullable=true)
 	private boolean	reservada_ip;
 
+	// CREACION DE COLUMNA
 	@Column(name="marca_ac", nullable = false)
 	private String marca;
 
+	// CREACION DE COLUMNA
 	@Column(name="modelo_ac", nullable = false)
 	private String modelo;
 
+	// CREACION DE COLUMNA
 	@Column(name="serie_ac", nullable = false)
 	private String serie;
 	
+	// CREACION DE COLUMNA
 	@Column(name="codigo_barras_ac", nullable = false)
 	private String codigo_barras;
 
+	// CREACION DE COLUMNA
 	@Column(name="borrado_logico_ac",nullable=false)
 	private boolean	borrado_logico;
 	
+	// CREACION DE COLUMNA
 	@Column(name="estado_ac",nullable=false)
 	private boolean	estado;
 	
+	// CREACION DE COLUMNA
 	@Column(name="fecha_registro_ac",nullable=false)
 	private Date fecha_registro; //Fecha registro
 	
+	// CREACION DE COLUMNA
 	@Column(name="fecha_entrega_ac",nullable=true)
 	private Date fecha_entrega; //Fecha asignacion
 	
+	// CREACION DE COLUMNA
 	@Column(name="fecha_devolucion_ac",nullable=true)
 	private Date fecha_devolucion;
 
+	// CREACION DE COLUMNA
 	@Column(name="fecha_eliminado_ac",nullable=true)
 	private Date fecha_eliminado;
 	
+	// CREACION DE COLUMNA
 	@Column(name="usuario_ac",nullable=false)
 	private Long id_ultimatix;
 
@@ -79,8 +103,6 @@ public class Activos implements Serializable {
 	public Activos(){
 		
 	}
-
-
 	public Activos(Long id_activo, String area, String edificio, String piso, String tipo, String hostname,
 			String direccion_mac, String direccion_ip, boolean reservada_ip, String marca, String modelo, String serie,
 			String codigo_barras, boolean borrado_logico, boolean estado, Date fecha_registro, Date fecha_entrega,
@@ -107,7 +129,7 @@ public class Activos implements Serializable {
 		this.id_ultimatix = id_ultimatix;
 	}
 
-
+	// GETTERS Y SETTERS
 	public Long getId_activo() {
 		return id_activo;
 	}

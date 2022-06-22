@@ -25,24 +25,28 @@ public class ServiciosActivos {
 	private final EdificioRepo edificioRepo;
 	private final TipoRepo tipoRepo;
 
+	// CONSTRUCTOR
 	public ServiciosActivos(ActivosRepo activosRepo, AreaRepo areaRepo, EdificioRepo edificioRepo, TipoRepo tipoRepo) {
 		this.activosRepo = activosRepo;
 		this.areaRepo = areaRepo;
 		this.edificioRepo = edificioRepo;
 		this.tipoRepo = tipoRepo;
 	}
-	//Activos
+	// FUNCION ANGREGAR ACTIVO
 	public Activos agregarActivo(Activos activo) {
 		return activosRepo.save(activo);
 	}
 	
+	// FUNCION VALIDAD MAC REPETIDA
 	public boolean validarMAC_repetida(String mac) {
 		List<Activos> activos_conMac = activosRepo.findAll();
+		// OBTENER TODOS LOS ACTIVOS CON MAC
 		 for (Activos iterante : activosRepo.findAll()) {
 			 if(iterante.getDireccion_mac() != null){
 				activos_conMac.add(iterante);
 			 }
-		 }
+		}
+		// VALIDADCION DE MAC REPETIDA
 		for (Activos iterante : activos_conMac) {
 			if ((iterante.getDireccion_mac().equals(mac))&&(!iterante.isEstado()&&(!iterante.isBorrado_logico()))) {
 				return false;
@@ -51,6 +55,7 @@ public class ServiciosActivos {
 		return true;
 	}
 
+	// FUNCION VALIDAR IP
 	public boolean isValidIPAddress(String ip){
 		String zeroTo255 = 
 			  "(\\d{1,2}|(0|1)\\"
@@ -72,6 +77,7 @@ public class ServiciosActivos {
 		return matcher.matches();
 	}
 	
+	// FUNCION VALIDAD MAC
 	public boolean isValidMacAddress(String mac){
 		String regex = "^([0-9A-Fa-f]{2}[:-])"
 						+ "{5}([0-9A-Fa-f]{2})|"
@@ -90,15 +96,17 @@ public class ServiciosActivos {
 		return matcher.matches();
 	}
 
-	
+	// VALIDAD IP REPETIDA
 	public boolean validarIPrepetida(String ip) {
 		 List<Activos> activos_conIP = activosRepo.findAll();
+		 // OBTENER TODOS LOS ACTIVOS CON IP
 		 for (Activos iterante : activosRepo.findAll()) {
 			 if(iterante.getDireccion_ip() != null){
 				activos_conIP.add(iterante);
 				
 			 }
-		 }		
+		 }
+		 // VERIFICAR IP REPETIDA		
 		for (Activos iterante : activos_conIP) {
 			if ((iterante.getDireccion_ip().equals(ip))&&(!iterante.isEstado()&&(!iterante.isBorrado_logico()))) {
 				return false;
@@ -107,6 +115,7 @@ public class ServiciosActivos {
 		return true;
 	}
 	
+	// FUNCION VALIADAR CODIGO DEL ACTIVO
 	public boolean validarCodigoBarras(String codigo) {
 		List<Activos> mis = activosRepo.findAll();
 		for (Activos iterante : mis) {
@@ -117,23 +126,28 @@ public class ServiciosActivos {
 		return false;
 	}
 	
+	// FUNCION ACTUALIZAR ACTIVO
 	public Activos actualizarActivo(Activos activo) {
 		return activosRepo.save(activo);
 	}
 	
+	// FUNCION ELIMINAR ACTIVO
 	public void eliminarActivo(Long id) {
 		activosRepo.deleteById(id);
 	}
 	
+	// FUNCION BUSCAR TODOS LOS ACTIVOS
 	public List<Activos> buscarTodos() {
 		return activosRepo.findAll();
 	}
 	
+	// FUNCION BUSCAR ACTIVO POR ID
 	public Activos buscarPorId(Long id) {
 		return activosRepo.findById(id)
 				.orElseThrow(()->new ActivoNoEncontradoExcepcion("Activo con id "+id+" no encontrado"));
 	}
 	
+	// BUSCAR ACTIVO POR UTIMATIX
 	public List<Activos> buscarPorUltimatix(Long ultimatix){
 		List<Activos> activos = activosRepo.findAll();
 		List<Activos> enviar = new ArrayList<>();
@@ -145,20 +159,24 @@ public class ServiciosActivos {
 		return enviar;
 	}
 	
+	// FUNCION VALIDACION DE FECHA
 	public boolean validarFecha(Date fecha1, Date fecha2) {
 		if ((fecha1.before(fecha2))||(fecha1.equals(fecha2))) {
 			return false;
 		}
 		return true;
 	}
-	//Area
+
+	// FUNCION BUSCAR TODAS LAS AREAS 
 	public List<Area> buscarAreas() {
 		return areaRepo.findAll();
 	}
 	
+	// FUNCION AGREGAR AREA
 	public Area agregarArea(Area nuevo) {
 		List<Area> areas = areaRepo.findAll();
 		for (Area iterante : areas) {
+			// VERIFICACION DE AREA REPETIDA
 			if (iterante.getNombre().equals(nuevo.getNombre())) {
 				throw new AreaNoEncontradoExcepcion("Area repetida");
 			}
@@ -166,32 +184,37 @@ public class ServiciosActivos {
 		return areaRepo.save(nuevo);
 	}
 
+	// FUNCION ELIMINAR AREA
 	public void eliminarArea(Long id){
 		areaRepo.deleteById(id);
 	}
 	
-	//Edificio
+	//FUNCION BUSCAR TODOS LOS EDIFICIOS
 	public List<Edificio> buscarEdificios() {
 		return edificioRepo.findAll();
 	}
 	
+	// FUNCION AGREGAR EDIFICIO
 	public Edificio agregarEdificio(Edificio nuevo) {
 		return edificioRepo.save(nuevo);
 	}
 
+	// FUNCION ELIMINAR EDIFICIO POR ID
 	public void eliminarEdificio(Long id){
 		edificioRepo.deleteById(id);
 	}
 	
-	//Tipo
+	//FUNCION BUSCAR ACTIVO POR SU TIPO
 	public List<Tipo> buscarTipos() {
 		return tipoRepo.findAll();
 	}
 	
+	// FUNCION AGREGAR NUEVO TIPO DE ACTIVO
 	public Tipo agregarTipo(Tipo nuevo) {
 		return tipoRepo.save(nuevo);
 	}
 
+	// FUNCION ELIMINAR TIPO DE ACTIVO POR ID
 	public void eliminarTipos(Long id) {
 		tipoRepo.deleteById(id);
 	}

@@ -6,10 +6,11 @@ import com.midd.core.modelo.TipoProyecto;
 @Service
 public class ServicioCatalogoTipoProyecto {
     private final TipoProyectoRepo tipoProyectoRepo;
-
+    // CONSTRUCTOR
     public ServicioCatalogoTipoProyecto(TipoProyectoRepo tipoProyectoRepo) {
         this.tipoProyectoRepo = tipoProyectoRepo;
     }
+    // FUNCION BUSCAR TODOS LOS TIPOS DE PROYECTOS
     public List<TipoProyecto> obtenerTiposProyectos(){
         return this.tipoProyectoRepo.findAll();           
     }    

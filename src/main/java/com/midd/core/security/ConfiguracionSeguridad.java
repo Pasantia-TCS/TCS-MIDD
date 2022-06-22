@@ -13,6 +13,7 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 public class ConfiguracionSeguridad extends WebSecurityConfigurerAdapter{
 	
 	@Override
+	// CONFIGURACION DE END POINTS PERMITIDOS
 	protected void configure(HttpSecurity http) throws Exception{
 		http
 			.csrf().disable()

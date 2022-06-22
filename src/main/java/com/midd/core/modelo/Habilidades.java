@@ -9,15 +9,20 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+
+// CREACION DE LA ENTIDAD
 @Entity
 @Table(name="habilidades_tecnicas_ac")
 public class Habilidades implements Serializable{
 	
+	// CREACION DEL ID
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
+	// CREACION DE COLUMNA
 	@Column(name="id_habilidad_tecnica",nullable = false,updatable = false)
 	private Long id;
 	
+	// CREACION DE COLUMNA
 	@Column(name="nombre_habilidad_tecnica",nullable=false)
 	private String 	nombre;
 
@@ -30,6 +35,7 @@ public class Habilidades implements Serializable{
 		super();
 	}
 
+	// GETTERS Y SETTERS
 	public Long getId() {
 		return id;
 	}

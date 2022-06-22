@@ -9,28 +9,36 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+
+// CREACION DE LA ENTIDAD
 @Entity
 @Table(name="edificio_ac")
 public class Edificio implements Serializable{
+
+	// CREACION ID DE LA TABLA
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
+	// CREACION DE COLUMNA
 	@Column(name="id_edificio",nullable = false,updatable = false)
 	private Long id;
 	
+	// CREACION DE COLUMNA
 	@Column(name="nombre_edificio",nullable=false)
 	private String 	nombre;
 	
+	// CREACION DE COLUMNA
 	@Column(name="piso_edificio",nullable=false)
 	private String	piso;
 	
-	//Constructor
+	
 	public Edificio(Long id, String nombre, String piso) {
 		super();
 		this.id = id;
 		this.nombre = nombre;
 		this.piso = piso;
 	}
-	//Getter and Setter
+
+	//GETTERS Y SETTERS
 	public Edificio() {
 		super();
 	}

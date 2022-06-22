@@ -4,39 +4,52 @@ import java.sql.Date;
 
 import javax.persistence.*;
 
+
+// CREACION DE LA ENTIDAD
 @Entity
 @Table(name = "equipo_asi")
 public class Equipo {
     
+    // CREACION ID DE LA TABLA
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    // CREACION DE COLUMNA
     @Column(name="id_equipo_asi", nullable = false, updatable = false, unique = true)
     private Long id_asi;
 
+    // CREACION DE COLUMNA
     @Column(name = "tipo_equipo_asi", nullable = false)
     private String tipo_equipo_asi;
 
+    // CREACION DE COLUMNA
     @Column(name="nombre_equipo_asi", nullable = false)
     private String nombre_equipo_asi;
     
+    // CREACION DE COLUMNA
     @Column(name="nombre_lider_asi", nullable = false)
     private String nombre_lider;
 
+    // CREACION DE COLUMNA
     @Column(name="nombre_lider_tecnico_asi", nullable = false)
     private String nombre_tecnico;
 
+    // CREACION DE COLUMNA
     @Column(name="miembros_ultimatix_asi", nullable = true)
     private Long[] miembros_ultimatix_asi;
 
+    // CREACION DE COLUMNA
     @Column(name="miembros_nombres_asi", nullable = true)
     private String[] miembros_nombres_asi;
 
+    // CREACION DE COLUMNA
     @Column(name = "descripcion_asi", nullable = false)
     private String descripcion_asi;
 
+    // CREACION DE COLUMNA
     @Column(name="estado_asi", nullable = false)
     private boolean estado_asi;
 
+    // CREACION DE COLUMNA
     @Column(name="fecha_registro", nullable = true)
     private Date fecha_registro;
 
@@ -58,6 +71,7 @@ public class Equipo {
         this.fecha_registro = fecha_registro;
     }
 
+    // GETTERS Y SETTERS
     public Long getId_asi() {
         return id_asi;
     }
