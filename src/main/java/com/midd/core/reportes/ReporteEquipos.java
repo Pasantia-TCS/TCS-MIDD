@@ -25,12 +25,16 @@ public class ReporteEquipos {
 
     List<Equipo> equipos;
 
+    // CONSTRUCTOR
     public ReporteEquipos(List<Equipo> equipos) {
         this.equipos = equipos;
+        // CREACION DEL LIBRO
         workbook = new XSSFWorkbook();
+        // CREACION DE HOJA
         sheet = workbook.createSheet("Reporte Equipos");
     }
 
+    // FUNCION CREACION DE LA CABECERA DE LA TABLA EQUIPOS
     private void cabeceraTabla(){
         Row row = sheet.createRow(0);
         CellStyle style = workbook.createCellStyle();
@@ -57,6 +61,7 @@ public class ReporteEquipos {
 
     }
 
+    // FUNCION ESCRIBIR LOS DATOS EN SUS RESPECTIVAS CELDAS
     private void escribirDatosTabla(){
         int initRow = 1;
         CellStyle cellStyle = workbook.createCellStyle();
@@ -96,7 +101,7 @@ public class ReporteEquipos {
             }
         }
     }
-
+     // CREACION DEL REPORTE
     public void export(HttpServletResponse response) throws IOException{
         cabeceraTabla();
         escribirDatosTabla();

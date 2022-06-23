@@ -9,6 +9,8 @@ import com.midd.core.Respuestas.*;
 import com.midd.core.administracion.*;
 import com.midd.core.modelo.*;
 
+
+// END POINT DE ASOCIADOS
 @RestController
 @CrossOrigin(origins = "*", methods = { RequestMethod.GET, RequestMethod.POST })
 @RequestMapping("/asociados")
@@ -30,19 +32,23 @@ public class RecursosAsociados {
 		this.logger = new RenameLogger();
 	}
 
+	// METODO GET BUSCAR TODOS LOS ASOCIADOS
 	@GetMapping("/buscarAsociados")
 	public ResponseEntity<List<Asociado>> obtenerTodosAsociados() {
 		List<Asociado> asociados = serviciosAsociados.buscarTodo();
 		return new ResponseEntity<>(asociados, HttpStatus.OK);
 	}
 
+	// BUSCAR ASOCIADO POR ID
 	@GetMapping("/buscar/{id}")
 	public ResponseEntity<Asociado> obtenerAsociadoPorId(@PathVariable("id") Long id) {
 		Asociado asociado = serviciosAsociados.buscarAsociadoPorId(id);
+		// SE DEFINE LA CLAVE EN VACIO POR SEGURIDAD
 		asociado.setClave("");
 		return new ResponseEntity<>(asociado, HttpStatus.OK);
 	}
 
+	// METODO POST PARA AGREGAR ASOCIADO
 	@PostMapping("/agregarAsociado")
 	public ResponseEntity<?> agregarAsociado(@RequestBody Asociado asociado) {
 		try {
@@ -51,12 +57,14 @@ public class RecursosAsociados {
 			return new ResponseEntity<>(respuestas.respuestas("Usuario ya registrado", "1001"), HttpStatus.BAD_REQUEST);
 		} catch (Exception e) {
 			asociado.setClave(cifrarClave.encode(asociado.getClave()));
+			// VERIFICACION DE CORREO REPETIDO
 			if (serviciosAsociados.validarCorreo(asociado) == false) {
 				this.logger.setLoggerWarm("El correo " + asociado.getCorreo() + " ya se encuentra registrado");
 				return new ResponseEntity<>(respuestas.respuestas("Correo ya registrado", "1002"),
 						HttpStatus.BAD_REQUEST);
 			}
 
+			// VERIFICACION DE TELEFONO REPETIDO
 			if (serviciosAsociados.validarTelefono(asociado) == false) {
 				this.logger.setLoggerWarm("El telefono " + asociado.getTelefono() + " ya se encuentra registrado");
 				return new ResponseEntity<>(respuestas.respuestas("Telefono ya registrado", "1003"),
@@ -71,16 +79,21 @@ public class RecursosAsociados {
 		}
 	}
 
+	// METODO ACTUALIZAR ASOCIADO
 	@PostMapping("/actualizarAsociado")
 	public ResponseEntity<?> actualizarAsociado(@RequestBody Asociado asociado) {
+		// VERIFICACION DE ASOCIADO NO REGISTRADO
 		if (serviciosAsociados.buscarAsociadoId(asociado.getId_numero_Ultimatix())) {
 			this.logger.setLoggerWarm("El asociado " + asociado.getId_numero_Ultimatix() + " no se encuentra registrado");
 			return new ResponseEntity<>(respuestas.respuestas("Usuario no registrado", "1021"), HttpStatus.BAD_REQUEST);
 		}
+		// VALIDACION DE CORREO REPETIDO
 		if (serviciosAsociados.validarCorreoActualizar(asociado) == false) {
 			this.logger.setLoggerWarm("El correo " + asociado.getCorreo() + " ya se encuentra registrado");
 			return new ResponseEntity<>(respuestas.respuestas("Correo ya registrado", "1021"), HttpStatus.BAD_REQUEST);
 		}
+
+		// VALIDACION DE TELEFONO REPETIDO
 		if (serviciosAsociados.validarTelefonoActualizar(asociado) == false) {
 			this.logger.setLoggerWarm("El telefono " + asociado.getTelefono() + " ya se encuentra registrado");
 			return new ResponseEntity<>(respuestas.respuestas("Telefono ya registrado", "1023"),
@@ -97,18 +110,21 @@ public class RecursosAsociados {
 		return new ResponseEntity<>(actualizadoAsociado, HttpStatus.OK);
 	}
 
+	// METODO DELETE PARA ELIMINAR UN ASOCIADO
 	@DeleteMapping("/eliminar/{id}")
 	public ResponseEntity<Asociado> eliminarAsociadoPorId(@PathVariable("id") Long id) {
 		serviciosAsociados.eliminarAsociado(id);
 		return new ResponseEntity<>(HttpStatus.ACCEPTED);
 	}
 
+	// METODO POST PARA LA FUNCION DEL LOGIN
 	@PostMapping("/tcs-login")
 	public ResponseEntity<?> iniciarSesion(@RequestBody Asociado asociado) {
 		Asociado nuevo = null;
 		// Guardar fecha del primer intento
 		try {
 			nuevo = serviciosAsociados.buscarAsociadoPorId(asociado.getId_numero_Ultimatix());
+			// VALIDACION DE NUMERO DE INTENTOS
 			if (nuevo.getIntentos() >= 3 || !nuevo.getEstado()) {
 				nuevo.setEstado(false);
 				Perfil mio = serviciosPerfil.buscarPerfilMio(nuevo.getId_numero_Ultimatix());
@@ -147,6 +163,7 @@ public class RecursosAsociados {
 					HttpStatus.BAD_REQUEST);
 
 		}
+		// REINICIO DE INTENTOS
 		nuevo.setIntentos(0);
 		nuevo.setEstado(true);
 		serviciosAsociados.actualizarAsociado(nuevo);
@@ -167,12 +184,14 @@ public class RecursosAsociados {
 		return new ResponseEntity<>(nuevo, HttpStatus.OK);
 	}
 
+	// FUNCION PARA LA ACTUALIZACION DE FECHA DE PRIMER INTENTO DE LOGIN
 	public Asociado actualizarFecha(Asociado asociado) {
 		java.sql.Date date = new java.sql.Date(new java.util.Date().getTime());
 		asociado.setFecha_login(date);
 		return asociado;
 	}
 
+	// METODO POST PARA EL CAMBIO DE PASSWORD
 	@PostMapping("/cambio-password")
 	public ResponseEntity<?> cambio_password(@RequestBody Asociado asociado) {
 		try {
@@ -196,6 +215,8 @@ public class RecursosAsociados {
 		}
 	}
 
+
+	// METODO POST PARA EL DESBLOQUEO DE ASOCIADO
 	@PostMapping("/desbloqueo-asociado")
 	public ResponseEntity<?> desbloqueo(@RequestBody Asociado asociado) {
 
@@ -227,6 +248,7 @@ public class RecursosAsociados {
 		}
 	}
 
+	// METODO POST PARA LA DEVOLCION DE CLAVE SECRETA
 	@PostMapping("/devolver-token")
 	public ResponseEntity<?> tokens(@RequestBody Asociado asociado) {
 		Map<String, Object> respuesta = new HashMap<>();

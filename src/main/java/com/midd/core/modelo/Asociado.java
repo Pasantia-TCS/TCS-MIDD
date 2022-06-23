@@ -8,38 +8,48 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+// CREACION DE LA ENTIDAD
 @Entity
 @Table(name="empleados_ac")
 public class Asociado implements Serializable{
 	@Id
-	//@GeneratedValue(strategy = GenerationType.AUTO)
+	// CREACION DE COLUMNA
 	@Column(name="id_empleados",nullable=false,updatable=false)
 	private Long 	id_numero_Ultimatix;
 	
+	// CREACION DE COLUMNA
 	@Column(name="contrasenha_empleados",nullable=false)
 	private String 	clave;
 	
+	// CREACION DE COLUMNA
 	@Column(name="nombre_empleados",nullable=false)
 	private String 	nombre;
 	
+	// CREACION DE COLUMNA
 	@Column(name="apellido_empleados",nullable=false)
 	private String 	apellido;
 	
+	// CREACION DE COLUMNA
 	@Column(name="telefono_empleados",nullable=false)
 	private String 	telefono;
 	
+	// CREACION DE COLUMNA
 	@Column(name="correo_empleados",nullable=false)
 	private String 	correo;
 
+	// CREACION DE COLUMNA
 	@Column(name="fecha_login_empleados", nullable = true)
 	private Date fecha_login;
 
+	// CREACION DE COLUMNA
 	@Column(name="intentos_empleados", nullable = true)
 	private int intentos;
 
+	// CREACION DE COLUMNAV
 	@Column(name="codigo_seguridad_empleados", nullable = true)
 	private String token;
 
+	// CREACION DE COLUMNA
 	@Column(name="estado_empleados", nullable = true)
 	private Boolean estado;
 
@@ -60,6 +70,7 @@ public class Asociado implements Serializable{
 		this.estado = estado;
 	}
 
+	// GETTERS Y SETTERS
 	public String getToken() {
 		return token;
 	}

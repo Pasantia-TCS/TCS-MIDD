@@ -9,32 +9,43 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+// CREACION DE LA ENTIDAD
 @Entity
 @Table(name = "asignacion_proyecto_asi")
 public class AsignacionProyecto implements Serializable {
+
+    // CREACION ID DE LA TABLA
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    // CREACION DE COLUMNA
     @Column(name = "id_asignacion_proyecto_asi", nullable = false, updatable = false, unique = true)
     private Long id_asignacion_proyecto_asg;
 
+    // CREACION DE COLUMNA
     @Column(name = "id_equipo_asi", nullable = false)
     private Long id_equipo_asi;
 
+    // CREACION DE COLUMNA
     @Column(name="ultimatix_asi", nullable = false)
     private Long ultimatix_asi;
 
+    // CREACION DE COLUMNA
     @Column(name = "asignacion_asi", nullable = false)
     private int asignacion;
 
+    // CREACION DE COLUMNA
     @Column(name = "fecha_inicio_asi", nullable = false)
     private Date fecha_inicio;
 
+    // CREACION DE COLUMNA
     @Column(name = "fecha_inicio_fin", nullable = false)
     private Date fecha_fin;
 
+    // CREACION DE COLUMNA
     @Column(name = "fecha_baja_asi", nullable = true)
     private Date fecha_baja;
     
+    // CREACION DE COLUMNA
     @Column(name = "estado_asi", nullable = true)
     private Boolean estado;
 
@@ -52,6 +63,7 @@ public class AsignacionProyecto implements Serializable {
         this.estado = estado;
     }
 
+    // GETTERS Y SETTERS
     public Long getId_asignacion_proyecto_asg() {
         return id_asignacion_proyecto_asg;
     }

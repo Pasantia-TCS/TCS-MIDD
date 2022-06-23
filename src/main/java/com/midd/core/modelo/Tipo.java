@@ -9,14 +9,19 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+// CREACION DE LA ENTIDAD
 @Entity
 @Table(name="tipo_ac")
 public class Tipo implements Serializable{
+
+	// CREACION DEL ID DE LA TABLA
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
+	// CREACION DE COLUMNA
 	@Column(name="id_tipo",nullable = false,updatable = false)
 	private Long id;
 	
+	// CREACION DE COLUMNA
 	@Column(name="nombre_tipo",nullable=false)
 	private String 	nombre;
 	
@@ -28,6 +33,8 @@ public class Tipo implements Serializable{
 	public Tipo() {
 		super();
 	}
+
+	// GETTERS Y SETTERS
 	public Long getId() {
 		return id;
 	}

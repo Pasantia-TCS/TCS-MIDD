@@ -28,13 +28,17 @@ public class ReporteHabilidades {
 
     List<Perfil> habilidades;
 
+    // CONSTRUTOR
     public ReporteHabilidades(List<Perfil> habilidades, ServiciosAsociados serviciosAsociados) {
         this.habilidades = habilidades;
         this.serviciosAsociados = serviciosAsociados;
+        // CREACION DEL LIBRO
         workbook = new XSSFWorkbook();
+        // CREACION DE HOJA
         sheet = workbook.createSheet("Reporte Habilidades");
     }
 
+    // FUNCION CREACION DE LA CABECERA DE LA TABLA HABILIDADES
     private void cabeceraTabla() {
         Row row = sheet.createRow(0);
         CellStyle style = workbook.createCellStyle();
@@ -65,6 +69,7 @@ public class ReporteHabilidades {
         }
     }
 
+     // FUNCION CREACION DE CELDAS
     public String[] celdas(String ultimatix, String nombres, String habilidadesT, String nivelesT, String habilidaesF,
             String nivelesF, String aplicaciones, String nivelesA, String usuarioRed, String telefono, String correo) {
 
@@ -84,6 +89,7 @@ public class ReporteHabilidades {
         return rows;
     }
 
+    // FUNCION ESCRIBIR LOS DATOS EN SUS RESPECTIVAS CELDAS
     private void escribirDatosTabla() {
         int initRow = 1;
         CellStyle cellStyle = workbook.createCellStyle();
@@ -198,6 +204,7 @@ public class ReporteHabilidades {
 
     }
 
+    // CREACION DEL REPORTE
     public void export(HttpServletResponse response) throws IOException {
         cabeceraTabla();
         escribirDatosTabla();

@@ -6,41 +6,61 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-
+// CREACION DE LA ENTIDAD
 @Entity
 @Table(name="perfil_asi")
 public class Perfil implements Serializable{
+	// CREACION DEL ID DE LA TABLA
 	@Id
+	// CREACION DE COLUMNA
 	@Column(name="id_ultimatix_perfil",nullable = false,updatable = false)
 	private Long id_ultimatix;
+
+	// CREACION DE COLUMNA
 	@Column(name="sobreMi_perfil",nullable=true)
 	private String sobreMi;
 	
+	// CREACION DE COLUMNA
 	@Column(name="habilidades_tecnica_perfil",nullable=true)
 	private String[] habilidades;
 	
+	// CREACION DE COLUMNA
 	@Column(name = "nivel_habilidad_tecnica_perfil",nullable=true)
 	private String[] nivel_habilidad;
 	
+	// CREACION DE COLUMNA
 	@Column(name="habilidades_funcional_perfil",nullable=true)
 	private String[] habilidades_funcionales;
 
+	// CREACION DE COLUMNA
 	@Column(name = "nivel_habilidad_funcional_perfil",nullable=true)
 	private String[] nivel_habilidad_funcional;
 	
+	// CREACION DE COLUMNA
 	@Column(name="aplicaciones_perfil",nullable=true)
 	private String[] aplicaciones;
+
+	// CREACION DE COLUMNA
 	@Column(name = "nivel_aplicacion_perfil",nullable=true)
 	private String[] nivel_aplicaciones;
 	
+	// CREACION DE COLUMNA
 	@Column(name="usuario_red_perfil",nullable=true)
 	private String usuario_red;
+
+	// CREACION DE COLUMNA
 	@Column(name="asignacion_perfil",nullable=true)
 	private int asignacion_usuario;
+
+	// CREACION DE COLUMNA
 	@Column(name="nombres_perfil",nullable=true)
 	private String nombres_completos;
+
+	// CREACION DE COLUMNA
 	@Column(name="rol_perfil")
 	private String  rol;
+
+	// CREACION DE COLUMNA
 	@Column(name="estado_empleados", nullable = true)
 	private Boolean estado;
 	
@@ -67,6 +87,7 @@ public class Perfil implements Serializable{
 		this.estado = estado;
 	}
 
+	// GETTERS Y SETTERS
 	public Long getId_ultimatix() {
 		return id_ultimatix;
 	}

@@ -2,6 +2,7 @@ package com.midd.core.administracion;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -24,6 +25,7 @@ public class ServiciosPerfil {
 	private PerfilRepo perfilRepo;
 	
 	@Autowired
+	// CONSTRUCTOR
 	public ServiciosPerfil(HabilidadesRepo habilidadesRepo, HabilidadesFuncionalesRepo habilidadesFuncionalesRepo,
 			AplicacionesRepo aplicacionesRepo, PerfilRepo perfilRepo) {
 		super();
@@ -32,36 +34,42 @@ public class ServiciosPerfil {
 		this.aplicacionesRepo = aplicacionesRepo;
 		this.perfilRepo = perfilRepo;
 	}
-
+	// CONSTRUCTOR
 	public ServiciosPerfil() {
 		super();
 	}
 
+	// FUNCION AGREGAR NUEVO PERFIL
 	public Perfil agregarPerfil(Perfil nuevo) {
 		Perfil mio = this.perfilUltimatix(nuevo.getId_ultimatix());
 		nuevo.setNombres_completos(mio.getNombres_completos());
 		return perfilRepo.save(nuevo);
 	}
 
+	// FUNCION ACTUALIZAR PERFIL
 	public Perfil actualizarPerfil(Perfil perfil){
 		return perfilRepo.save(perfil);
 	}
 	
+	// FUNCION OBTENER PERFIL POR ID
 	public Perfil perfilUltimatix(Long id) {
 		return perfilRepo.findById(id).
 				orElseThrow(()->new UserNotFoundException("Asociado con id "+id+" no encontrado"));
 	}
 
+	// FUNCION BUSCAR TODOS LOS PERFILES
 	public List<Perfil> buscarTodos(){
 		return perfilRepo.findAll();
 	}
 	
+	// FUNCION BUSCAR HABILIDADES POR UTIMATIX
 	public String[] habilidadesUltimatix(Long id) {
 		Perfil mio = this.perfilUltimatix(id);
 		String[] mios = mio.getHabilidades();
 		return mios;
 	}
 	
+	// FUNCION BUSCAR PERFIL POR ID
 	public boolean buscarPerfilId(Long id) {
 		if (perfilRepo.findById(id).isEmpty()) {
 			return true;
@@ -69,6 +77,7 @@ public class ServiciosPerfil {
 		return false;		
 	}
 	
+	// FUNCION BUSCAR PERFILES POR HABILIDAD
 	public List<Perfil> buscarPerfiles(String habilidad){
 		List<Perfil> mios = perfilRepo.findAll();
 		List<Perfil> perfiles = new ArrayList<>();
@@ -83,29 +92,34 @@ public class ServiciosPerfil {
 					}
 				}
 			} catch (Exception e) {
+				return Collections.emptyList();
 			}			
 		}
 		return perfiles;
 	}
 	
+	// FUNCION ACTUALIZAR ASIGNACION
 	public void actualizarAsignacion(Perfil asignacionActualizada){
 		perfilRepo.save(asignacionActualizada);
 	}
 
+	// FUNCION BUSCAR PERFIL ACTUAL
 	public Perfil buscarPerfilMio(Long ultimatix){
 		return this.perfilUltimatix(ultimatix);
 	}
 	
-	//Habilidades Tecnicas
+	// FUNCION VALIDAR HABILIDADES DUPLICADAS
 	public Object habilidadesDuplicadas(Perfil perfil){
 		Perfil mi_perfil = perfilRepo.getById(perfil.getId_ultimatix());
 		for(String habilidad: perfil.getHabilidades()){
 			for(String mis_habilidad: mi_perfil.getHabilidades()){
+				// VALIDACION HABILIDAD REPETIDA
 				if(habilidad.equals(mis_habilidad)){
 					return false;
 				}
 			}	
 		}
+		// CREACION DE AUXILIARES
 		String[] mis_habilidades = mi_perfil.getHabilidades();
 		String[] mis_niveles = mi_perfil.getNivel_habilidad();
 
@@ -117,6 +131,7 @@ public class ServiciosPerfil {
 			niveles_habilidad.add(perfil.getNivel_habilidad()[i]);
 		}
 
+		
 		String[] nuevas_habilidades = new String[habilidades.size()];
 		String[] nuevos_niveles = new String [niveles_habilidad.size()];
 
@@ -124,10 +139,12 @@ public class ServiciosPerfil {
 		niveles_habilidad.toArray(nuevos_niveles);
 
 		mi_perfil.setHabilidades(nuevas_habilidades);
+		//ACTUALIZACION DE HABILIDADES
 		mi_perfil.setNivel_habilidad(nuevos_niveles);
 		return perfilRepo.save(mi_perfil);
 	}
 	
+	// FUNCION BUSCAR HABILIDADES Y NIVELES POR UTIMATIX
 	public Object buscarHabilidadUltimatix(Perfil perfil){
 		Perfil mi_perfil = perfilRepo.getById(perfil.getId_ultimatix());
 		String[] mis_habilidades = mi_perfil.getHabilidades();
@@ -140,49 +157,49 @@ public class ServiciosPerfil {
 		return habilidadesResponse;
 	}
 	
-	//Habilidades Funcionales
-	
-	
-	
-	//Aplicaciones
-	
-	//Habilidades-Tecnicas Catalogo
+	// FUNCION AGREGAR HABILIDADES
 	public Habilidades agregarHabilidades(Habilidades nuevo) {
 		return habilidadesRepo.save(nuevo);
 	}
 	
+	// FUNCION BUSCAR TODAS LAS HABILIDADES
 	public List<Habilidades> buscarHabilidades(){
 		return habilidadesRepo.findAll();
 	}
 	
+	// FUNCION ELIMINAR HABILIDAD POR ID
 	public void eliminarHabilidad(Long id){
 		habilidadesRepo.deleteById(id);
 	}
 	
-	//Habilidades-Funcionales Catalogo
-	
+	// HABILIDADES FUNCIONALES
+	// FUNCION AGREGAR HABILIDAD FUNCIONAL
 	public Habilidades_funcionales agregarHabilidades_funcionales(Habilidades_funcionales nuevo) {
 		return habilidadesFuncionalesRepo.save(nuevo);
 	}
 	
+	// FUNCION OBTENER TODAS LAS HABILIDADES FUNCIONALES
 	public List<Habilidades_funcionales> buscarHabilidades_funcionales(){
 		return habilidadesFuncionalesRepo.findAll();
 	}
 	
+	// FUNCION ELIMINAR HABILIDAD FUNCIONAL POR ID
 	public void eliminarHabilidad_funcional(Long id){
 		habilidadesFuncionalesRepo.deleteById(id);
 	}
 	
-	//Aplicaciones Catalogo
-	
+	//APLICACIONES CATALOGO
+	// FUNCION AGREGAR APLICACION
 	public Aplicaciones_catalogo agregarAplicaciones(Aplicaciones_catalogo nuevo) {
 		return aplicacionesRepo.save(nuevo);
 	}
 	
+	// FUNCION OBTENER TODAS LAS APLICACIONES
 	public List<Aplicaciones_catalogo> buscarAplicaciones(){
 		return aplicacionesRepo.findAll();
 	}
 	
+	// FUNCION ELIMINAR APLICACION POR ID
 	public void eliminarAplicaciones(Long id){
 		aplicacionesRepo.deleteById(id);
 	}

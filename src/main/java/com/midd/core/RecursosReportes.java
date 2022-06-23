@@ -40,7 +40,7 @@ public class RecursosReportes {
         this.servicio_asociado = servicio_asociado;
     }
 
-
+    // METODO PARA OBTENER EL REPORTE DE EQUIPOS
     @GetMapping("/equipos-reportes")
     public void reportesEquipos(HttpServletResponse response) throws IOException{
         response.setContentType("application/octet-stream");
@@ -56,7 +56,7 @@ public class RecursosReportes {
         reporteEquipos.export(response);
     }
   
-
+    // METODO GET PARA OBTENER EL REPORTE DE ASIGNACIONES
     @GetMapping("/asignaciones-reportes")
     public void reportesAsignaciones(HttpServletResponse response) throws IOException{
         response.setContentType("application/octet-stream");
@@ -72,6 +72,7 @@ public class RecursosReportes {
         reporte_asignaciones.export(response);
     }
 
+    // METODO GET PARA OBTENER EL REPORTE DE ACTIVOS
     @GetMapping("/activos-reportes")
     public void reportesActivos(HttpServletResponse response) throws IOException{
         response.setContentType("application/octet-stream");
@@ -87,6 +88,7 @@ public class RecursosReportes {
         reporte_activos.export(response);
     }
 
+    // METODO GET PARA OBTENER EL REPORTE DE HABILIDADES
     @GetMapping("/habilidades-reportes")
     public void reportesHabilidades(HttpServletResponse response) throws IOException{
         response.setContentType("application/octet-stream");

@@ -18,7 +18,8 @@ public class ServicosAsignacionProyecto {
     private final AsignacionesProyectoRepo asignaciones_proyecto_repo;
     private final ServicioEquipo servicioEquipo;
     private final ServiciosPerfil serviciosPerfil;
-
+    
+    // CONSTRUCTOR
     public ServicosAsignacionProyecto(AsignacionesProyectoRepo asignacion_proyecto_repo,
             ServicioEquipo servicioEquipo,
             ServiciosPerfil serviciosPerfil) {
@@ -27,28 +28,32 @@ public class ServicosAsignacionProyecto {
         this.serviciosPerfil = serviciosPerfil;
     }
 
+    // FUNCION AGREGAR ASIGNACION
     public AsignacionProyecto agregarAsignacionProyecto(AsignacionProyecto asignacionNueva) {
         return asignaciones_proyecto_repo.save(asignacionNueva);
     }
 
+    // FUNCION ACTUALIZAR FECHA FIN DE LA ASIGNACION
     public AsignacionProyecto actualizarFechaFin(AsignacionProyecto asignacionNueva) {
         AsignacionProyecto fecha_fin = this.buscarAsigancionProyectoId(asignacionNueva.getId_asignacion_proyecto_asg());
         fecha_fin.setFecha_fin(asignacionNueva.getFecha_fin());
         return asignaciones_proyecto_repo.save(asignacionNueva);
     }
 
+    // FUNCION ACTUALIZAR EL ESTADO DE LA ASIGNACION
     public AsignacionProyecto actualizarEstado(AsignacionProyecto asignacionNueva) {
         AsignacionProyecto estado = this.buscarAsigancionProyectoId(asignacionNueva.getId_asignacion_proyecto_asg());
         estado.setEstado(asignacionNueva.getEstado());
         return asignaciones_proyecto_repo.save(asignacionNueva);
     }
 
+    // FUNCION BUSCAR ASIGNACIONES POR ID
     public AsignacionProyecto buscarAsigancionProyectoId(Long id) {
         return asignaciones_proyecto_repo.findById(id)
                 .orElseThrow(() -> new AsignacionProyectoNoEncontrada("Asignacion " + id + " no encontrada"));
     }
 
-
+    // FUNCION BUSCAR ASIGNACION POR UTIMATIX
     public List<AsignacionProyecto> buscarAsignacionUltimatix(Long ultimatix) {
         List<AsignacionProyecto> asignaciones_proyecto = new ArrayList<>();
         List<AsignacionProyecto> asignaciones_proyectos = asignaciones_proyecto_repo.findAll();
@@ -62,11 +67,13 @@ public class ServicosAsignacionProyecto {
         return asignaciones_proyecto;
     }
 
+    // FUNCION BUSCAR TODAS LAS ASIGNACIONES
     public List<AsignacionProyecto> buscarTodasAsignacionesProyecto() {
         List<AsignacionProyecto> asignaciones_proyectos = asignaciones_proyecto_repo.findAll();
         return asignaciones_proyectos;
     }
 
+    // FUNCION VALIDAD NO REPETICION DE MIEMBROS
     public boolean validarMiembro(Long ultimatix, Long id_equipo) {
         Equipo mio = servicioEquipo.buscarEquipoMio(id_equipo);
         Long[] miembros_ultimatix = mio.getMiembros_ultimatix_asi();
@@ -78,6 +85,7 @@ public class ServicosAsignacionProyecto {
         return false;
     }
    
+    // FUNCION OBTENER ASIGNACIONES VENCIDAS
     public List<AsignacionProyecto> retornaAsignacionesVencidasUltimatix(Long ultimatix, Long id_equipo){
         List<AsignacionProyecto> mis = new ArrayList<>();
         List<AsignacionProyecto> todos = asignaciones_proyecto_repo.findAll();
@@ -91,6 +99,7 @@ public class ServicosAsignacionProyecto {
         return mis;
     }
 
+    // FUNCION VALIDAR FECHA PREVIA
     public boolean validarFechaPrevia(Long ultimatix, Long id_equipo, Date fecha_nueva){
         List<AsignacionProyecto> mis = this.retornaAsignacionesVencidasUltimatix(ultimatix,id_equipo);
         if(mis.isEmpty()){
@@ -102,6 +111,7 @@ public class ServicosAsignacionProyecto {
         return false;
     }
 
+    // FUNCION AGREGAR MIEMBRO Y ACTUALIZAR ASIGNACION (SUMA)
     public void agregarMiembroEquipo(Long ultimatix, Long id_equipo, int asignacion){
         Equipo mi = servicioEquipo.buscarEquipoMio(id_equipo);
         Perfil mio = serviciosPerfil.buscarPerfilMio(ultimatix);
@@ -120,11 +130,13 @@ public class ServicosAsignacionProyecto {
         nombresUltimatix.toArray(arr2);
         mi.setMiembros_ultimatix_asi(arr1);
         mi.setMiembros_nombres_asi(arr2);
+        // ACTUALIZACION DE LA ASIGNACION
         mio.setAsignacion_usuario(mio.getAsignacion_usuario()+asignacion);
         servicioEquipo.actilizarMiembros(mi);
         serviciosPerfil.actualizarAsignacion(mio);
     }
 
+    // FUNCION DE ACTULIZACION DE LA ASINAION (RESTA)
     public void restarAsignacion(Long ultimatix, int asignacion){
         Perfil miPerfil = serviciosPerfil.perfilUltimatix(ultimatix);
         miPerfil.setAsignacion_usuario(miPerfil.getAsignacion_usuario()-asignacion);
@@ -156,6 +168,7 @@ public class ServicosAsignacionProyecto {
         servicioEquipo.actilizarMiembros(mi);        
     }
 
+    // FUNCION OBTENER TODAS LAS ASIGNACIONES POR UTIMATIX
     public List<AsignacionProyecto> listaAsignaciones(Long ultimatix){
         List<AsignacionProyecto> listaProyectos = buscarTodasAsignacionesProyecto();
         List<AsignacionProyecto> listaUltimatix = new ArrayList<>();
@@ -167,6 +180,7 @@ public class ServicosAsignacionProyecto {
         return listaProyectos;
     }
 
+    // FUNCION OBTENER TODAS LAS ASIGNACIONES
     public List<AsignacionProyecto> buscarAsignaciones(){
         return asignaciones_proyecto_repo.findAll();
     }

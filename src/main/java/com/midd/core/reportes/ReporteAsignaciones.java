@@ -31,17 +31,20 @@ public class ReporteAsignaciones {
 
     List<AsignacionProyecto> asignaciones;
 
+    // CONSTRUCTOR
     public ReporteAsignaciones(ServiciosPerfil servicio_perfil, ServiciosAsociados servicio_asociados,
             ServicioEquipo servicio_equipo, List<AsignacionProyecto> asignaciones) {
         this.servicio_perfil = servicio_perfil;
         this.servicio_asociados = servicio_asociados;
         this.servicio_equipo = servicio_equipo;
         this.asignaciones = asignaciones;
-
+        // CREACION DEL LIBRO
         workbook = new XSSFWorkbook();
+        // CREACION DE LA HOJA
         sheet = workbook.createSheet("Reporte Asignaciones");
     }
 
+    // FUNCION CREACION DE LA CABECERA DE LA TABLA ASIGNACIONES
     private void cabeceraTabla() {
         Row row = sheet.createRow(0);
         CellStyle style = workbook.createCellStyle();
@@ -76,6 +79,7 @@ public class ReporteAsignaciones {
 
     }
 
+     // FUNCION ESCRIBIR LOS DATOS EN SUS RESPECTIVAS CELDAS
     private void escribirDatosTabla() {
         int initRow = 1;
         CellStyle cellStyle = workbook.createCellStyle();
@@ -130,6 +134,7 @@ public class ReporteAsignaciones {
 
     }
 
+     // CREACION DEL REPORTE
     public void export(HttpServletResponse response) throws IOException {
         cabeceraTabla();
         escribirDatosTabla();

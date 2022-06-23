@@ -4,6 +4,9 @@ import com.midd.core.modelo.Edificio;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
+
+// INNTERFAZ QUE EXTIENDE DEL JPA 
+// JPA VINCULADO CON EL MODELO DE EDIFICIOS
 public interface EdificioRepo extends JpaRepository<Edificio, Long>{
 	
 }

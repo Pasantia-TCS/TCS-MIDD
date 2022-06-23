@@ -10,6 +10,7 @@ import com.midd.core.Respuestas.*;
 import com.midd.core.administracion.*;
 import com.midd.core.modelo.*;
 
+// END POINTS DE ACTIVOS
 @RestController
 @CrossOrigin(origins = "*", methods = { RequestMethod.GET, RequestMethod.POST })
 @RequestMapping("/activos")
@@ -27,7 +28,8 @@ public class RecursosActivos {
 		this.servicioValidarFechaSDF = servicioValidarFechaSDF;
 		this.logger = new RenameLogger();
 	}
-
+	
+	// METODO POST PARA AGREGAR ACTIVOS
 	@PostMapping("/agregarActivo")
 	public ResponseEntity<?> agregarActivo(@RequestBody Activos activo) {
 		try {
@@ -35,6 +37,7 @@ public class RecursosActivos {
 			this.logger.setLoggerWarm("El activo " + activo.getId_activo() + " ya se encuentra registrado");;
 			return new ResponseEntity<>(respuestas.respuestas("Activo ya registrado", "2001"), HttpStatus.BAD_REQUEST);
 		} catch (Exception e) {
+			// SI EL ACTIVO ES CPU/LAPTOP SE LE DEBE REALIZAR VALIDACIONES EN MAC E IP
 			if (activo.getTipo().equals("CPU/LAPTOP")) {
 				if (serviciosActivos.validarMAC_repetida(activo.getDireccion_mac())) {
 					this.logger.setLoggerWarm("La MAC " + activo.getDireccion_mac() + " ya se encuentra registrada");
@@ -62,11 +65,13 @@ public class RecursosActivos {
 				return new ResponseEntity<>(respuestas.respuestas("Código de activo ya registrado", "2003"),
 						HttpStatus.BAD_REQUEST);
 			}
+			// EL ESTADO DEL ACTIVO POR DEFAULT VA SER FALSE
 			activo.setBorrado_logico(false);
 			activo.setEstado(false);
 			activo.setFecha_registro(Date.valueOf(LocalDate.now(ZoneId.of("GMT-05:00"))));
 			LocalDate uno = activo.getFecha_entrega().toLocalDate();
 			activo.setFecha_entrega(Date.valueOf(uno));
+			// VALIDACION DE FERIADOS O FINES DE SEMANA
 			if (servicioValidarFechaSDF.validarFecha(activo.getFecha_entrega())) {
 				this.logger.setLoggerWarm("Fecha entrega no puede ser Sábado, Domingo o Feriado");
 				return new ResponseEntity<>(respuestas
@@ -92,18 +97,21 @@ public class RecursosActivos {
 		}
 	}
 
+	// METODO GET PARA OBTENER TODOS LOS ACTIVOS
 	@GetMapping("/buscarTodo")
 	public ResponseEntity<?> buscarTodo() {
 		List<Activos> activos = serviciosActivos.buscarTodos();
 		return new ResponseEntity<>(activos, HttpStatus.OK);
 	}
 
+	// METODO POST PARA BUSCAR TODOS LOS ACTIVOS SEGUN UTIMATIX
 	@PostMapping("/buscarUltimatix")
 	public ResponseEntity<?> buscarActivosPorUltimatix(@RequestBody Activos activo) {
 		List<Activos> activos = serviciosActivos.buscarPorUltimatix(activo.getId_ultimatix());
 		return new ResponseEntity<>(activos, HttpStatus.OK);
 	}
 
+	// METODO POST PARA ELIMINAR (CAMBIO DE ESTADO) UN ACTIVO
 	@PostMapping("/eliminarActivo")
 	public ResponseEntity<?> eliminarActivo(@RequestBody Activos activo) {
 		try {
@@ -112,6 +120,7 @@ public class RecursosActivos {
 				activo1.setBorrado_logico(true);
 				activo1.setFecha_eliminado(Date.valueOf(LocalDate.now(ZoneId.of("GMT-05:00"))));
 				
+				// VALIDACION DE FERIADOS Y FINES DE SEMANA
 				if (servicioValidarFechaSDF.validarFecha(activo1.getFecha_eliminado())) {
 					this.logger.setLoggerWarm("Fecha de eliminación no puede ser Sábado, Domingo o Feriado");
 					return new ResponseEntity<>(respuestas
@@ -134,7 +143,8 @@ public class RecursosActivos {
 		}
 	}
 
-	@PostMapping("devolverActivo")
+	// METODO POST PARA LA DEVOLUCION DE UN ACTIVO
+	@PostMapping("/devolverActivo")
 	public ResponseEntity<?> devolverActivo(@RequestBody Activos activo) {
 		try {
 			Activos activo1 = serviciosActivos.buscarPorId(activo.getId_activo());
@@ -151,6 +161,7 @@ public class RecursosActivos {
 							HttpStatus.BAD_REQUEST);
 				}
 				serviciosActivos.actualizarActivo(activo1);
+				// VALIDACION DE FERIADOS Y FINES DE SEMANA
 				if (servicioValidarFechaSDF.validarFecha(activo1.getFecha_devolucion())) {
 					this.logger.setLoggerWarm("Fecha de devolución no puede ser Sábado, Domingo o Feriado");
 					return new ResponseEntity<>(respuestas
@@ -172,13 +183,15 @@ public class RecursosActivos {
 		}
 	}
 
-	// Edificios
+	// EDIFICOS
+	// METODO GET PARA BUSCAR TODOS LOS EDIFICIOS
 	@GetMapping("/edificios")
 	public ResponseEntity<?> buscarEdificios() {
 		List<Edificio> edificios = serviciosActivos.buscarEdificios();
 		return new ResponseEntity<>(edificios, HttpStatus.OK);
 	}
 
+	// METODO POST PARA AGREGAR UN NUEVO EDIFICIO
 	@PostMapping("/agregarEdificio")
 	public ResponseEntity<?> agregarEdificio(@RequestBody Edificio nuevo) {
 		List<Edificio> edificios = serviciosActivos.buscarEdificios();
@@ -193,6 +206,8 @@ public class RecursosActivos {
 		return new ResponseEntity<>(nuevo, HttpStatus.OK);
 	}
 
+
+	// METODO POST PARA ELIMINAR UN EDIFICIO
 	@PostMapping("/eliminarEdificio")
 	public ResponseEntity<?> eliminarEdificio(@RequestBody Edificio eliminar) {
 		serviciosActivos.eliminarEdificio(eliminar.getId());
@@ -201,16 +216,19 @@ public class RecursosActivos {
 		return new ResponseEntity<>(edificios, HttpStatus.OK);
 	}
 
-	// Areas
+	// AREAS
+	// METODO GET PARA OBTENER TODAS LAS AREAS
 	@GetMapping("/areas")
 	public ResponseEntity<?> buscarAreas() {
 		List<Area> areas = serviciosActivos.buscarAreas();
 		return new ResponseEntity<>(areas, HttpStatus.OK);
 	}
 
+	// METODO POST PARA AGREGAR UNA NUEVA AREA
 	@PostMapping("/agregarArea")
 	public ResponseEntity<?> agregarEdificio(@RequestBody Area nuevo) {
 		List<Area> areas = serviciosActivos.buscarAreas();
+		// BUSQUEDA SECUENCIAL PARA BUSCAR REPETIDOS
 		for (Area iterante : areas) {
 			if (iterante.getNombre().equals(nuevo.getNombre())) {
 				return new ResponseEntity<>(respuestas.respuestas("Área ya registrado", "400"), HttpStatus.BAD_REQUEST);
@@ -221,6 +239,7 @@ public class RecursosActivos {
 		return new ResponseEntity<>(nuevo, HttpStatus.OK);
 	}
 
+	// METODO POST PARA ELIMINAR UN AREA
 	@PostMapping("/eliminarArea")
 	public ResponseEntity<?> eliminarArea(@RequestBody Area eliminar) {
 		serviciosActivos.eliminarArea(eliminar.getId());
@@ -229,16 +248,19 @@ public class RecursosActivos {
 		return new ResponseEntity<>(areas, HttpStatus.OK);
 	}
 
-	// Tipos
+	// TIPOS DE ACTIVOS
+	// METODO GET PARA OBTENER TODOS LOS TIPOS DE ACTIVOS
 	@GetMapping("/tipos")
 	public ResponseEntity<?> buscarTipos() {
 		List<Tipo> tipos = serviciosActivos.buscarTipos();
 		return new ResponseEntity<>(tipos, HttpStatus.OK);
 	}
 
+	// METODO POST PARA AGREGAR UN NUEVO TIPO DE ACTIVO
 	@PostMapping("/agregarTipo")
 	public ResponseEntity<?> agregarTipos(@RequestBody Tipo nuevo) {
 		List<Tipo> tipos = serviciosActivos.buscarTipos();
+		// BUSQUEDA SECUENCIAL PARA BUSCAR REPETIDOS
 		for (Tipo iterante : tipos) {
 			if (iterante.getNombre().equals(nuevo.getNombre())) {
 				return new ResponseEntity<>(respuestas.respuestas("Tipo ya registrado", "400"), HttpStatus.BAD_REQUEST);
@@ -248,6 +270,7 @@ public class RecursosActivos {
 		return new ResponseEntity<>(nuevo, HttpStatus.OK);
 	}
 
+	//METODO POST PARA ELIMINAR UN TIPO DE ACTIVO
 	@PostMapping("/eliminarTipo")
 	public ResponseEntity<?> eliminarTipo(@RequestBody Tipo eliminar) {
 		serviciosActivos.eliminarTipos(eliminar.getId());

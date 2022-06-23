@@ -11,9 +11,10 @@ import org.springframework.stereotype.Service;
 @Service
 public class ServicioValidarFechaSDF {
     
+	// FUNCION VALIDAR FECHAS
     public boolean validarFecha(java.sql.Date fechaPorVerificar){
         List<Date> feriados = new ArrayList<>();
-        //Feriado 2022
+        	//FERIADO 2022
         	feriados.add(Date.valueOf("2022-03-01"));
         	feriados.add(Date.valueOf("2022-04-15"));
         	feriados.add(Date.valueOf("2022-05-02"));
@@ -24,7 +25,7 @@ public class ServicioValidarFechaSDF {
         	feriados.add(Date.valueOf("2022-11-04"));
         	feriados.add(Date.valueOf("2022-12-05"));
         	feriados.add(Date.valueOf("2022-12-26"));
-            //Feriado 2023
+            //FERIADO 2023
         	feriados.add(Date.valueOf("2023-01-02"));
         	feriados.add(Date.valueOf("2023-02-20"));
         	feriados.add(Date.valueOf("2023-02-21"));
@@ -37,7 +38,7 @@ public class ServicioValidarFechaSDF {
         	feriados.add(Date.valueOf("2023-11-03"));
         	feriados.add(Date.valueOf("2023-12-05"));
         	feriados.add(Date.valueOf("2023-12-25"));
-            //
+
             LocalDate uno = fechaPorVerificar.toLocalDate();
             int cont = 0;
             for (Date iterante : feriados) {

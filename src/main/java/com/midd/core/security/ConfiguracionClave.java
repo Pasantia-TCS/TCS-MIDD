@@ -7,6 +7,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 
 @Configuration
 public class ConfiguracionClave {
+	// FUNCION PARA LA ENCRIPTACION DE LA CONSTRASEÑA DEL ASOCIADO
 	@Bean
 	public PasswordEncoder passwordEncoder() {
 		return new BCryptPasswordEncoder(10);

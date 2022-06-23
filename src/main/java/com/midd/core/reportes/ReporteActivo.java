@@ -29,16 +29,18 @@ public class ReporteActivo {
     private final ServiciosAsociados servicios_asociados;
 
     List<Activos> activos;
-
+    // CONSTRUCTOR
     public ReporteActivo(ServiciosPerfil servicio_perfil, ServiciosAsociados servicios_asociados, List<Activos> activos) {
         this.servicio_perfil = servicio_perfil;
         this.servicios_asociados = servicios_asociados;
         this.activos = activos;
-
+        // CREACION DEL LIBRO
         workbook = new XSSFWorkbook();
+        //CREACION DE HOJA
         sheet = workbook.createSheet("Reporte Activos");
     }
 
+    // CREACION DE LA CABECERA DE LA TABLA ACTIVOS
     private void cabeceraTabla(){
         Row row = sheet.createRow(0);
         CellStyle style = workbook.createCellStyle();
@@ -70,13 +72,14 @@ public class ReporteActivo {
             "Correo electrónico",
             "Teléfono"
         };
+        
         for(int i =0; i < headers.length; i++){
             cell = row.createCell(i);
             cell.setCellValue(headers[i]);
             cell.setCellStyle(style);
         }
     }
-
+    // FUNCION ESCRIBIR LOS DATOS EN SUS RESPECTIVAS CELDAS
     private void escribirDatosTabla(){
         int initRow = 1;
         CellStyle cellStyle = workbook.createCellStyle();
@@ -167,6 +170,7 @@ public class ReporteActivo {
 
     }
 
+    // CREACION DEL REPORTE
     public void export(HttpServletResponse response) throws IOException{
         cabeceraTabla();
         escribirDatosTabla();
