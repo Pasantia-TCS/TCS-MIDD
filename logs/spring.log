@@ -61,3 +61,33 @@ This generated password is for development use only. Your security configuration
 2022-06-22 16:07:23.811  WARN 13484 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
 2022-06-22 16:07:24.039  INFO 13484 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
 2022-06-22 16:07:24.055  INFO 13484 --- [main] com.midd.core.MiddlewareApplication      : Started MiddlewareApplication in 12.831 seconds (JVM running for 13.552)
+2022-06-22 18:11:46.477  INFO 14824 --- [main] com.midd.core.MiddlewareApplication      : Starting MiddlewareApplication using Java 18.0.1.1 on DESKTOP-9TFUPPJ with PID 14824 (C:\TCS_Proyecto\middleware\middleware_tcs_proyecto\Middleware\target\classes started by user in C:\TCS_Proyecto\middleware\middleware_tcs_proyecto\Middleware)
+2022-06-22 18:11:46.488  INFO 14824 --- [main] com.midd.core.MiddlewareApplication      : No active profile set, falling back to 1 default profile: "default"
+2022-06-22 18:11:48.287  INFO 14824 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-06-22 18:11:48.560  INFO 14824 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 226 ms. Found 12 JPA repository interfaces.
+2022-06-22 18:11:49.633  INFO 14824 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$26eb6531] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-22 18:11:49.822  INFO 14824 --- [main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2022-06-22 18:11:50.777  INFO 14824 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2022-06-22 18:11:50.805  INFO 14824 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-22 18:11:50.809  INFO 14824 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2022-06-22 18:11:51.117  INFO 14824 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-06-22 18:11:51.122  INFO 14824 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4515 ms
+2022-06-22 18:11:51.790  INFO 14824 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-06-22 18:11:51.940  INFO 14824 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.7.Final
+2022-06-22 18:11:52.411  INFO 14824 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-06-22 18:11:52.732  INFO 14824 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-06-22 18:11:54.317  INFO 14824 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-06-22 18:11:54.395  INFO 14824 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.SQLServer2012Dialect
+2022-06-22 18:11:56.856  INFO 14824 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-06-22 18:11:56.888  INFO 14824 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-06-22 18:11:59.410  WARN 14824 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-06-22 18:11:59.662  WARN 14824 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: dbebea74-e8b9-4497-bfb0-44389cc3584d
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2022-06-22 18:11:59.888  INFO 14824 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will not secure any request
+2022-06-22 18:12:00.688  WARN 14824 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2022-06-22 18:12:01.128  INFO 14824 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2022-06-22 18:12:01.157  INFO 14824 --- [main] com.midd.core.MiddlewareApplication      : Started MiddlewareApplication in 15.674 seconds (JVM running for 16.5)
